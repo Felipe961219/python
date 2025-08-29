@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Inmobiliaria Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <h1>Propiedades en venta</h1>
+    <div class="properties">
+        {% for p in properties %}
+        <div class="property">
+            <h2>{{ p.title }}</h2>
+            <p>Precio: {{ p.price }} €</p>
+            <button>Comprar</button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
